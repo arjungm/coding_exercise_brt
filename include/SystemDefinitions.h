@@ -20,6 +20,8 @@ struct Question
 
 struct CAC
 {
+  typedef boost::shared_ptr<CAC> Ptr;
+  typedef boost::shared_ptr<CAC const> ConstPtr;
   string name;
   string desc;
   string sys_name;
@@ -39,6 +41,6 @@ struct Story
 
 typedef map<int, Question::ConstPtr> QuestionMap;
 typedef map<int, Story::ConstPtr> StoryMap;
-typedef map<string, CAC> CACMap;
+typedef map<string, CAC::ConstPtr> CACMap;
 
 #endif

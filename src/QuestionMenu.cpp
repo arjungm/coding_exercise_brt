@@ -28,7 +28,7 @@ void QuestionMenu::display(const CACMap& cac_map)
   {
     // display cac
     CACMap::const_iterator cac_entry = cac_map.find(qg_it->first);
-    cout << cac_entry->second.desc << endl;
+    cout << cac_entry->second->desc << endl;
     QuestionList::const_iterator q_it = qg_it->second.begin();
     // list questions
     for(;q_it!=qg_it->second.end();++q_it)

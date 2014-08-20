@@ -144,9 +144,9 @@ void SystemBrowser::loadFromFile(const string& file)
           }
         case CAC_TYPE:
           {
-            CAC c;
-            parseCACFromObject(*obj,c);
-            cacs_[c.name] = c;
+            CAC::Ptr c = boost::make_shared<CAC>();
+            parseCACFromObject(*obj,*c);
+            cacs_[c->name] = c;
             break;
           }
       }
